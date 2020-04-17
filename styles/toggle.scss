@@ -1,0 +1,90 @@
+/* customizable options */
+$-toggle-off-background-color: #e8eaf0;
+$-toggle-off-color: #b6bcd1;
+$-toggle-off-text: 'off';
+$-toggle-on-background-color: #47b282;
+$-toggle-on-color: #ffffff;
+$-toggle-on-text: 'on';
+$-toggle-switch-background-color: #f4f5f8;
+$-toggle-font-size: 10px;
+$-toggle-height: 32px;
+$-toggle-width: 2 * $-toggle-height;
+
+
+/* toggle off position */
+input[type='checkbox'].toggle {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: $-toggle-off-background-color;
+	border: 2px solid $-toggle-off-background-color;
+	color: $-toggle-off-color;
+	cursor: pointer;
+	font-size: $-toggle-font-size;
+	line-height: $-toggle-height - 4px;
+	padding: ($-toggle-height - 4px) / 2;
+	display: inline-block;
+	position: relative;
+	width: $-toggle-width;
+
+
+	margin: 4rem;
+
+	&:focus {
+		box-shadow: 0 0 0 2px rgba($-toggle-off-color, .5);
+		outline: none;
+		text-decoration: none;
+	}
+
+	/* toggle switch */
+	&::before {
+		background: $-toggle-switch-background-color;
+		content: '';
+		display: block;
+		height: $-toggle-height - 4px;
+		transition: left .5s;
+		width: ($-toggle-width / 2) - 4px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	/* toggle text */
+	&::after {
+		content: $-toggle-off-text;
+		text-align: center;
+		text-transform: uppercase;
+		width: ($-toggle-width / 2) - 4px;
+
+		position: absolute;
+		top: 0;
+		left: $-toggle-width / 2;
+		z-index: 1;
+	}
+
+
+	/* toggle on position */
+	&:checked {
+		background: $-toggle-on-background-color;
+		border-color: $-toggle-on-background-color;
+		color: $-toggle-on-color;
+
+		&:focus {
+			box-shadow: 0 0 0 2px rgba($-toggle-on-background-color, .5);
+		}
+
+		/* toggle switch */
+		&::before {
+			left: $-toggle-width / 2;
+		}
+
+		/* toggle text */
+		&::after {
+			content: $-toggle-on-text;
+
+			left: 0;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+/* customizable options */
+/* toggle off position */
+input[type=checkbox].toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #e8eaf0;
+  border: 2px solid #e8eaf0;
+  color: #b6bcd1;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 28px;
+  padding: 14px;
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  margin: 4rem;
+  /* toggle switch */
+  /* toggle text */
+  /* toggle on position */
+}
+input[type=checkbox].toggle:focus {
+  box-shadow: 0 0 0 2px rgba(182, 188, 209, 0.5);
+  outline: none;
+  text-decoration: none;
+}
+input[type=checkbox].toggle::before {
+  background: #f4f5f8;
+  content: "";
+  display: block;
+  height: 28px;
+  transition: left 0.5s;
+  width: 28px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+input[type=checkbox].toggle::after {
+  content: "off";
+  text-align: center;
+  text-transform: uppercase;
+  width: 28px;
+  position: absolute;
+  top: 0;
+  left: 32px;
+  z-index: 1;
+}
+input[type=checkbox].toggle:checked {
+  background: #47b282;
+  border-color: #47b282;
+  color: #ffffff;
+  /* toggle switch */
+  /* toggle text */
+}
+input[type=checkbox].toggle:checked:focus {
+  box-shadow: 0 0 0 2px rgba(71, 178, 130, 0.5);
+}
+input[type=checkbox].toggle:checked::before {
+  left: 32px;
+}
+input[type=checkbox].toggle:checked::after {
+  content: "on";
+  left: 0;
+}
+
+/*# sourceMappingURL=toggle.css.map */
