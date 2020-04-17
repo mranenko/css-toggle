@@ -27,9 +27,6 @@ input[type='checkbox'].toggle {
 	position: relative;
 	width: $-toggle-width;
 
-
-	margin: 4rem;
-
 	&:focus {
 		box-shadow: 0 0 0 2px rgba($-toggle-off-color, .5);
 		outline: none;
