@@ -22,8 +22,8 @@ input[type='checkbox'].toggle {
 	color: $-toggle-off-color;
 	cursor: pointer;
 	font-size: $-toggle-font-size;
+	height: $-toggle-height + 2 * $-toggle-border-width;
 	line-height: $-toggle-height;
-	padding: $-toggle-height / 2;
 	display: inline-block;
 	position: relative;
 	width: $-toggle-width + 2 * $-toggle-border-width;
